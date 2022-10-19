@@ -8,3 +8,304 @@ paragraph yellow: #ECB12F
 links blue: #2E71A6
 footer links grey: #454245
 */
+
+html {
+	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h2,
+h3 {
+	color: #191817;
+}
+
+.button {
+	display: block;
+	width: 100%;
+	line-height: 3.5;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+}
+
+.button-white {
+	color: #540b51;
+	background-color: white;
+	border: 1px solid #540b51;
+}
+
+.button-purple {
+	color: white;
+	background-color: #540b51;
+	border: 1px solid white;
+}
+
+nav,
+header,
+.hq {
+	background-color: #540b51;
+	color: white;
+}
+
+main > section {
+	padding: 2em 1em;
+	background-color: #f3eae2;
+}
+
+nav {
+	padding: 1em;
+	position: sticky;
+	z-index: 1;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul {
+	display: none;
+}
+
+.nav-left > img {
+	height: 17px;
+}
+
+.nav-right > button {
+	background-color: #540b51;
+	border: none;
+}
+
+.nav-right img {
+	height: 15px;
+}
+
+header {
+	padding: 1em;
+	text-align: center;
+	overflow: hidden;
+}
+
+.header-content {
+	display: flex;
+	flex-flow: column wrap;
+	gap: 1em;
+}
+
+.header-content > h1 {
+	font-size: 2.5em;
+}
+
+.p-highlight {
+	color: #ecb12f;
+}
+
+.sign-up-google {
+	position: relative;
+	background-color: #4285f4;
+	color: white;
+}
+
+.sign-up-google img {
+	box-sizing: content-box;
+	position: absolute;
+	left: 6px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 1.8em;
+	padding: 6px 8px;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.header-image-container {
+	margin-bottom: -90px;
+}
+
+.header-image-container img {
+	max-width: 720px;
+	max-height: 400px;
+	margin-left: -3em;
+}
+
+.section-companies p {
+	padding-bottom: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+.companies-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	row-gap: 1.2em;
+}
+
+.companies-container img {
+	height: 35px;
+}
+
+.team-text,
+.communication-text,
+.mobile-text {
+	display: flex;
+	flex-flow: column wrap;
+	gap: 1em;
+	padding: 2em 1em 0;
+	font-size: 18px;
+}
+
+.team-img,
+.mobile-img {
+	margin-left: -1em;
+	margin-right: 2em;
+}
+
+section a {
+	text-decoration: none;
+	color: #2e71a6;
+	position: relative;
+}
+
+section a::after {
+	background: url("../images/icon-arrow-right.png") no-repeat;
+	content: "";
+	height: 13px;
+	width: 19px;
+	position: absolute;
+	top: 50%;
+	transform: translate(5px, -50%);
+}
+
+.communication {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.communication-text {
+	order: 2;
+}
+
+.communication-img {
+	margin-left: 2em;
+	margin-right: -1em;
+	order: 1;
+}
+
+.scale {
+	background-color: white;
+	text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+	gap: 1em;
+}
+
+.scale h3 {
+	font-size: xx-large;
+}
+
+.scale > p {
+	letter-spacing: 1px;
+}
+
+.average-list span {
+	font-size: 3em;
+	color: #540b51;
+	font-weight: bolder;
+}
+
+.average-list li {
+	width: 185px;
+	margin: 2em auto;
+	font-weight: bold;
+}
+
+.hq {
+	clip-path: ellipse(105% 100% at center top);
+	padding-bottom: 4em;
+}
+
+.hq > h3 {
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+footer {
+	padding: 2em 1em;
+	display: flex;
+	flex-flow: column;
+	gap: 1em;
+}
+
+footer img {
+	width: 54px;
+	height: 54px;
+}
+
+footer ul > li {
+	margin: 2em 0;
+}
+
+footer > :nth-child(n + 5) {
+	order: 2;
+}
+
+.map {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	font-size: 0.85em;
+	color: #454245;
+}
+
+footer > hr {
+	width: 100%;
+}
+
+.ul-links {
+	order: 1;
+	font-weight: 900;
+}
+
+.map > ul {
+	width: 85px;
+}
+
+.map > ul > li:first-child {
+	font-weight: 700;
+}
+
+.region::before {
+	content: url("../images/icon-region.png") " ";
+}
+.download {
+	color: #2e71a6;
+	margin-bottom: 0;
+}
+.download::before {
+	content: url("../images/icon-download.png") " ";
+}
+
+.social-media {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.5em;
+}
+
+.copy {
+	font-size: 0.875em;
+	margin-bottom: 1em;
+}
+
+/* Iteração 1 768px */
+/* Iteração 2 */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+}
+/* Iteração 3 */
+@media all and (min-width: 1025px) and (max-width: 1440px) {
+}
+/* Iteração 4 */
+@media all and (min-width: 1441px) {
+}

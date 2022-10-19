@@ -11,6 +11,8 @@ footer links grey: #454245
 
 html {
 	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+	--padding-horizontal: 1.5rem;
+	--padding-vertical: 2rem;
 }
 
 h2,
@@ -48,12 +50,12 @@ header,
 }
 
 main > section {
-	padding: 2em 1em;
+	padding: var(--padding-vertical) var(--padding-horizontal);
 	background-color: #f3eae2;
 }
 
 nav {
-	padding: 1em;
+	padding: var(--padding-horizontal);
 	position: sticky;
 	z-index: 1;
 	top: 0;
@@ -79,7 +81,7 @@ nav ul {
 }
 
 header {
-	padding: 1em;
+	padding: var(--padding-horizontal);
 	text-align: center;
 	overflow: hidden;
 }
@@ -127,7 +129,7 @@ header {
 }
 
 .section-companies p {
-	padding-bottom: 2em;
+	padding-bottom: var(--padding-vertical);
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -151,14 +153,13 @@ header {
 	display: flex;
 	flex-flow: column wrap;
 	gap: 1em;
-	padding: 2em 1em 0;
-	font-size: 18px;
+	padding: var(--padding-vertical) var(--padding-horizontal) 0;
 }
 
 .team-img,
 .mobile-img {
-	margin-left: -1em;
-	margin-right: 2em;
+	margin-left: calc(-1 * var(--padding-horizontal));
+	margin-right: var(--padding-vertical);
 }
 
 section a {
@@ -187,8 +188,8 @@ section a::after {
 }
 
 .communication-img {
-	margin-left: 2em;
-	margin-right: -1em;
+	margin-left: var(--padding-vertical);
+	margin-right: calc(-1 * var(--padding-horizontal));
 	order: 1;
 }
 
@@ -216,7 +217,7 @@ section a::after {
 
 .average-list li {
 	width: 185px;
-	margin: 2em auto;
+	margin: var(--padding-vertical) auto;
 	font-weight: bold;
 }
 
@@ -233,7 +234,7 @@ section a::after {
 }
 
 footer {
-	padding: 2em 1em;
+	padding: var(--padding-vertical) var(--padding-horizontal);
 	display: flex;
 	flex-flow: column;
 	gap: 1em;
@@ -245,7 +246,7 @@ footer img {
 }
 
 footer ul > li {
-	margin: 2em 0;
+	margin: var(--padding-vertical) 0;
 }
 
 footer > :nth-child(n + 5) {
@@ -255,7 +256,7 @@ footer > :nth-child(n + 5) {
 .map {
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	font-size: 0.85em;
 	color: #454245;
 }
@@ -295,6 +296,7 @@ footer > hr {
 }
 
 .copy {
+	text-align: center;
 	font-size: 0.875em;
 	margin-bottom: 1em;
 }
@@ -302,6 +304,71 @@ footer > hr {
 /* Iteração 1 768px */
 /* Iteração 2 */
 @media all and (min-width: 768px) and (max-width: 1024px) {
+	header {
+		text-align: left;
+
+		background: url("../images/background-singup.png") no-repeat;
+		background-size: cover;
+
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		gap: var(--padding-horizontal);
+		padding-bottom: 8em;
+	}
+
+	.header-content {
+		font-size: 32px;
+	}
+
+	.header-image-container {
+		margin-bottom: unset;
+	}
+	.header-image-container img {
+		margin-left: 0;
+		padding: 2em 0;
+	}
+	.header-sign-up {
+		min-width: 440px;
+	}
+	.team-img,
+	.mobile-img {
+		margin-left: calc(-1 * var(--padding-horizontal));
+		margin-right: calc(2 * var(--padding-vertical));
+	}
+	.communication-img {
+		margin-left: calc(2 * var(--padding-vertical));
+		margin-right: calc(-1 * var(--padding-horizontal));
+	}
+	.scale > div {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		gap: 1em;
+	}
+	.scale > div button {
+		width: auto;
+		padding: 0.5em 3em;
+		letter-spacing: 1px;
+	}
+	.average-list {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	.hq {
+		padding-left: 8em;
+		padding-right: 8em;
+	}
+	.ul-links {
+		display: flex;
+		flex-flow: row nowrap;
+		font-size: 0.75em;
+		justify-content: space-between;
+	}
+	.social-media {
+		justify-content: flex-start;
+		gap: 1em;
+	}
 }
 /* Iteração 3 */
 @media all and (min-width: 1025px) and (max-width: 1440px) {
